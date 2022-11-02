@@ -1,0 +1,28 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Storage Location',
+                typeNamePlural: 'Storage Locations ',
+                title: { type: #STANDARD, label: 'Storage Location', value: 'StorageLocation' } },
+  presentationVariant: [{ sortOrder: [{ by: 'StorageLocation', direction:  #DESC }] }] }
+
+annotate view ZSTORAGELOCATION_P with
+{
+  /* facet */
+  // doesn't matter which field element the facet is preceeding
+  @UI.facet: [{ id: 'StorageLocation',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE, // this type shows the object page with all elements annotated by `identification`
+                label: 'Storage Loc',
+                position: 10 }]
+
+  @UI: { lineItem: [{ position: 10 }],
+         selectionField: [{ position: 10 }] }
+  Plant;
+
+  @UI: { lineItem: [{ position: 20 }],
+         identification: [{ position: 20 }] }
+  StorageLocation;
+  @UI: { lineItem: [{ position: 30 }],
+         identification: [{ position: 30 }]}
+  StorageLocationName;
+}

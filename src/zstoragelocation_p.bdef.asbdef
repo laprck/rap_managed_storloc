@@ -1,0 +1,9 @@
+projection;
+strict;
+
+define behavior for ZSTORAGELOCATION_P alias StorageLocation
+{
+  use create;
+  use update;
+  use delete;
+}

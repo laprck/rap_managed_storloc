@@ -1,0 +1,23 @@
+managed implementation in class zbp_storagelocation unique;
+strict;
+
+define behavior for ZStorageLocation alias StorageLocation
+implementation in class zstorage_location unique // behavior pool needed for CRUD even if methods are empty
+persistent table t001l
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory ) Plant, StorageLocation;
+
+  mapping for T001L
+  {
+    Plant = werks;
+    StorageLocation = lgort;
+    StorageLocationName = lgobe;
+  }
+}

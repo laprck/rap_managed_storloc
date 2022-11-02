@@ -1,0 +1,4 @@
+@EndUserText.label: 'Storage Location'
+define service ZSTORAGELOCATION_UI {
+  expose ZSTORAGELOCATION_P as StorageLocation;
+}

@@ -10,10 +10,10 @@ annotate view ZSTORAGELOCATION_P with
   /* facet */
   // doesn't matter which field element the facet is preceeding
   @UI.facet: [{ id: 'StorageLocation',
-                purpose: #STANDARD,
-                type: #IDENTIFICATION_REFERENCE, // this type shows the object page with all elements annotated by `identification`
-                label: 'Storage Loc',
-                position: 10 }]
+              purpose: #STANDARD,
+              type: #IDENTIFICATION_REFERENCE, // this type shows the object page with all elements annotated by `identification`
+              label: 'Storage Loc',
+              position: 10 }]
 
   @UI: { lineItem: [{ position: 10 }],
          selectionField: [{ position: 10 }] }
